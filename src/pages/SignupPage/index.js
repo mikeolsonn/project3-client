@@ -25,6 +25,10 @@ function SignupPage(props) {
              event.preventDefault(); // so page doesnt refresh and we dont lose state
             await signup(formState);
             setFormState(getInitialFormState);
+
+            //TODO: comment out to see that user wont get added to state without
+            props.handleSignupOrLogin();
+
             props.history.push('/dashboard');
         } catch (error) {
             alert(error.message);
