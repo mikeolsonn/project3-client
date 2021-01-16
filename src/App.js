@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { getItems } from './services/acnh-api';
 import { useState } from 'react';
 import { getUser, logout } from './services/userService';
 import './App.css';
@@ -13,8 +15,26 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 function App(props) {
 
+
+  async function getAppData() {
+    const data = await getItems()
+    const dataArray = Object.values(data)
+    console.log(dataArray.flat().slice(0, 100))
+    setItemData({results: dataArray.flat().slice(0, 100)})
+  }
+
+
+  useEffect(() => {
+    getAppData();
+  }, []);
+
   const [ userState, setUserState] = useState({
     user: getUser()
+  });
+
+  const [ itemData, setItemData ] = useState({
+    results: []
+
   });
 
   // have to manually put user in state when they sign up or login
@@ -31,7 +51,7 @@ function App(props) {
     // reroute user to landing page
     props.history.push('/')
   }
-
+  
   return (
     <div className="App">
       <Header handleLogout={handleLogout} user={userState.user} />
@@ -40,12 +60,15 @@ function App(props) {
             <Route exact path="/" render={props =>
               <HomePage />
             } />
+            {itemData.results.map((item, idx) =>
             <Route exact path="/dashboard" render={props =>
-            userState.user ?
-              <DashboardPage />
+            userState.user && itemData.results ?
+              <DashboardPage data={itemData.results} key={idx} item={item} />
               :
               <Redirect to="/login" />
             } />
+            )}
+
             <Route exact path="/signup" render={props =>
               <SignupPage 
               {...props}

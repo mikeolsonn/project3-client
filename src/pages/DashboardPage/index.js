@@ -1,9 +1,12 @@
 function DashboardPage(props) {
-    return (
+    console.log(props.data);
+
+
+        return (
         <div>
-            DashboardPage
-        </div>
-    );
+           
+        </div> 
+    );       
 }
 
 export default DashboardPage;

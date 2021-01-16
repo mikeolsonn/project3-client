@@ -1,4 +1,5 @@
-function HomePage(props) {
+function HomePage(props) 
+{
     return (
         <div>
             HomePage
