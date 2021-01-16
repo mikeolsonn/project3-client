@@ -19,9 +19,10 @@ function App(props) {
   async function getAppData() {
     const data = await getItems()
     const dataArray = Object.values(data)
-    console.log(dataArray.flat().slice(0, 100))
-    setItemData({results: dataArray.flat().slice(0, 100)})
+    console.log(dataArray.flat())
+    setItemData({results: dataArray.flat()})
   }
+  // .slice(0, 100) -> add to end of .flat() if it breaks
 
 
   useEffect(() => {

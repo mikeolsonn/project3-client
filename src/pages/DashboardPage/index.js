@@ -1,10 +1,8 @@
 function DashboardPage(props) {
     console.log(props.data);
-
-
-        return (
+         return (
         <div>
-           
+            <p>{props.item.price}</p>
         </div> 
     );       
 }
