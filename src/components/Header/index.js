@@ -5,7 +5,7 @@ function Header(props) {
     return ( 
     <header className={styles.Header}>
         <Link to="/">
-        <h1>ACNH App</h1>
+        <h1>Critterpedia+</h1>
         </Link>
         <nav>
             <ul>

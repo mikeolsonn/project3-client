@@ -1,0 +1,22 @@
+.Bugs {
+    /* display: inline-grid;
+    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px; 
+     */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: #ffc677;
+}
+
+.Bug {
+    border: 2px solid #92c57c;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    
+
+}

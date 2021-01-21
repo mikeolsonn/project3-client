@@ -1,10 +1,14 @@
+import Bugs from '../../components/Bugs';
+
 function DashboardPage(props) {
     console.log(props.data);
-         return (
+    return (
         <div>
-            <p>{props.item.price}</p>
-        </div> 
-    );       
+        <Bugs data={props.data} />
+        </div>
+    )
 }
+   
+
 
 export default DashboardPage;

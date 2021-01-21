@@ -6,6 +6,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 
+
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
 import SignupPage from './pages/SignupPage';
@@ -19,7 +20,7 @@ function App(props) {
   async function getAppData() {
     const data = await getItems()
     const dataArray = Object.values(data)
-    console.log(dataArray.flat())
+    // console.log(dataArray.flat())
     setItemData({results: dataArray.flat()})
   }
   // .slice(0, 100) -> add to end of .flat() if it breaks
@@ -61,14 +62,14 @@ function App(props) {
             <Route exact path="/" render={props =>
               <HomePage />
             } />
-            {itemData.results.map((item, idx) =>
+
             <Route exact path="/dashboard" render={props =>
             userState.user && itemData.results ?
-              <DashboardPage data={itemData.results} key={idx} item={item} />
+              <DashboardPage data={itemData.results} />
               :
               <Redirect to="/login" />
             } />
-            )}
+
 
             <Route exact path="/signup" render={props =>
               <SignupPage 
