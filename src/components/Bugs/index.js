@@ -5,8 +5,7 @@ function Bugs(props) {
     return (
         <div className={styles.Bugs}>
         {props.data.map((item, idx) =>
-            
-                <p key={idx} className={styles.Bug}>{item.id}</p>
+            <img key={idx} className={styles.Bug} src={item.icon_uri} />
             )}
         </div>
     )
