@@ -19,16 +19,18 @@ const bugModalStyles = {
 function Bugs(props) {
 
 const [isOpen, setIsOpen] = useState(false);
-const [critterId, setCritterId] = useState({critterId:""});
+const [critter, setCritter] = useState({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"" });
 
 
-function triggerModal(critterId) {
+function triggerModal(critter) {
+    alert(critter.image_uri)
+    if(!critter) {
+        setCritter({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"" })
+    } else {
+        setCritter(critter); 
+    }
     
     setIsOpen(!isOpen);
-    setCritterId({name:critterId}); // changed from critterId:critterId
-
-    
-    
 }
   
 
@@ -40,10 +42,11 @@ function triggerModal(critterId) {
         {props.data.map((item, idx) =>
         <>
             <img 
-                onClick={() => triggerModal(item.name["name-EUen"])} // call to item instead of item.id to return all of the components of the array
+                onClick={() => triggerModal(item)} 
                 key={idx}
                 className={styles.Bug} 
                 src={item.icon_uri} 
+                alt={item.name["name-EUen"]}
             />
         
                 </>
@@ -52,13 +55,15 @@ function triggerModal(critterId) {
             <Modal 
                 style={bugModalStyles}
                 isOpen={isOpen}
+             
                 onRequestClose={triggerModal}
                 contentLabel="testing"
                 
                 >
-                    <div>{critterId.name}</div> 
+                    <div>{critter.name["name-EUen"]}</div>
+                    <div>{critter["museum-phrase"]}</div> 
                     
-                    <button onClick={triggerModal}>Close</button>
+                    <button onClick={triggerModal} isOpen={!isOpen}>Close</button>
                 </Modal>
        </>
     )
