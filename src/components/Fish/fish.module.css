@@ -1,8 +1,5 @@
-.Bugs {
-    /* display: inline-grid;
-    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px 40px 40px;
-    grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px; 
-     */
+.Fishes {
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,7 +10,7 @@
  
 }
 
-.Bug {
+.Fish {
     border: 2px solid #92c57c;
     width: 45px;
     height: 45px;
@@ -22,10 +19,7 @@
 
 }
 
-.Bug:hover {
+.Fish:hover {
     border: 2px dotted #92c57c;
     background-color: #ddffce;
 }
-
-
- 

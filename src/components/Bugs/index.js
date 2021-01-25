@@ -19,21 +19,19 @@ const bugModalStyles = {
 function Bugs(props) {
 
 const [isOpen, setIsOpen] = useState(false);
-const [critter, setCritter] = useState({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"" });
+const [critter, setCritter] = useState({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"", availability:{"month-northern":""}, availability:{"rarity":""} });
 
 
-function triggerModal(critter) {
-    alert(critter.image_uri)
-    if(!critter) {
-        setCritter({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"" })
+function triggerModal(selection) {
+    if(!selection) {
+        setCritter({name:{"name-EUen":""}, image_uri:"", "museum-phrase":"", availability:{"month-northern":""}, availability:{"rarity":""} })
     } else {
-        setCritter(critter); 
+        setCritter(selection); 
     }
+   
     
     setIsOpen(!isOpen);
 }
-  
-
     return (
         <>
         <h2>Bugs</h2>
@@ -55,18 +53,27 @@ function triggerModal(critter) {
             <Modal 
                 style={bugModalStyles}
                 isOpen={isOpen}
-             
-                onRequestClose={triggerModal}
+            
+                onRequestClose={() => triggerModal()}
                 contentLabel="testing"
                 
                 >
                     <div>{critter.name["name-EUen"]}</div>
-                    <div>{critter["museum-phrase"]}</div> 
-                    
-                    <button onClick={triggerModal} isOpen={!isOpen}>Close</button>
+                    <div>{critter["museum-phrase"]}</div>
+                    <div>
+                    <ul>Availability
+                        <li>Months: {critter.availability["month-northern"]}</li>
+                        <li>Time: {critter.availability["time"]}</li>
+                    </ul>
+                    </div>
+                    <div>Rarity: {critter.availability["rarity"]}</div>
+                    <img src={critter.image_uri} alt="no image available" width="200" height="300" />
+                    <button onClick={() => triggerModal()}>Close</button>
                 </Modal>
-       </>
+    </>
     )
+  
+
 }
 
    

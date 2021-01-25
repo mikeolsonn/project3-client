@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { getItems } from './services/acnh-api';
+import { getItems, getFish } from './services/acnh-api';
 import { useState } from 'react';
 import { getUser, logout } from './services/userService';
 import './App.css';
@@ -24,10 +24,16 @@ function App(props) {
     setItemData({results: dataArray.flat()})
   }
   // .slice(0, 100) -> add to end of .flat() if it breaks
-
+  async function getFishData() {
+    const fish = await getFish()
+    const fishArray = Object.values(fish)
+    console.log(fishArray.flat());
+    setFishData({results: fishArray.flat()})
+  }
 
   useEffect(() => {
     getAppData();
+    getFishData();
   }, []);
 
   const [ userState, setUserState] = useState({
@@ -37,6 +43,10 @@ function App(props) {
   const [ itemData, setItemData ] = useState({
     results: []
 
+  });
+
+  const [ fishData, setFishData ] = useState({
+    results: []
   });
 
   // have to manually put user in state when they sign up or login
@@ -56,7 +66,9 @@ function App(props) {
   
   return (
     <div className="App">
-      <Header handleLogout={handleLogout} user={userState.user} />
+      { 
+      props.location.pathname!=='/' ? <Header handleLogout={handleLogout} user={userState.user} />: null 
+      }
         <main>
           <Switch>
             <Route exact path="/" render={props =>
@@ -65,7 +77,7 @@ function App(props) {
 
             <Route exact path="/dashboard" render={props =>
             userState.user && itemData.results ?
-              <DashboardPage data={itemData.results} />
+              <DashboardPage data={itemData.results} fish={fishData.results} />
               :
               <Redirect to="/login" />
             } />
