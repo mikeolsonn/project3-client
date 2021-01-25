@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { login } from '../../services/userService';
+import styles from './Login.module.css';
 
 function LoginPage(props) {
     const [formState, setFormState] = useState(getInitialFormState);
@@ -36,7 +37,7 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="Page">
+        <div className={styles.Login}>
             <form onSubmit={handleSubmit}>
                 <input 
                 value={formState.email} 

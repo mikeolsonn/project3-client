@@ -7,8 +7,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: 'Gorditas', cursive;
+    
 }
 
-.Links {
-    flex-direction: column;
+.Link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Login {
+    background-color: #92c57c;
+    
+}
+
+.Signup {
+   background-color: #f8a4af; 
 }

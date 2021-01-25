@@ -15,15 +15,15 @@ class HomePage extends Component
     <div className={styles.Container}>
       <h1 className={styles.Title}>Crossing Guide</h1>
       
-        <div className={styles.Links}>
         
-            <button>
-                <Link to="/login">Login</Link>
+        
+            <button className={styles.Login}>
+                <Link to="/login" className={styles.Link}>Login</Link>
             </button>
-            <button>
-                <Link to="/signup">Get Started</Link>
+            <button className={styles.Signup}>
+                <Link to="/signup" className={styles.Link}>Get Started</Link>
             </button>
-        </div>
+       
         </div>
        </> 
     )};
