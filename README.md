@@ -3,7 +3,12 @@
 This app is a tool for Animal Crossing New Horizons in which users can login to access information for each critter in the game.  Fill up your museum easily with this completed critterpedia (and don't feel bad about time traveling :wink:)
 
 ## :camera_flash: Screenshots
-![homepage](https://imgur.com/a/KFLUMDi)
+
+Homepage
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/KFLUMDi" data-context="false" ><a href="//imgur.com/a/KFLUMDi"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+
+
 ## :computer: Technologies Used
 
 <ul>
