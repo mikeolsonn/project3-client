@@ -5,7 +5,7 @@ This app is a tool for Animal Crossing New Horizons in which users can login to 
 ## :camera_flash: Screenshots
 
 Homepage
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/KFLUMDi" data-context="false" ><a href="//imgur.com/a/KFLUMDi"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<a href="https://ibb.co/GMxGTrG"><img src="https://i.ibb.co/qgyh52h/Screen-Shot-2021-01-25-at-10-15-52-PM.png" alt="Screen-Shot-2021-01-25-at-10-15-52-PM" border="0"></a>
 
 
 
