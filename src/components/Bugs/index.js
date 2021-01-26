@@ -10,9 +10,10 @@ const bugModalStyles = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     overflow: 'auto',
-    border: '1px solid #f8a4ae',
+    border: '1px solid #92c57c',
     outline: 'none',
     width: '400px',
+    'background-color': '#eae3b1',
     'max-width': '100%',
   
 }
@@ -61,21 +62,21 @@ function triggerModal(selection) {
                 contentLabel="testing"
                 
                 >
-                    <img className={styles.FirstColumn} src={critter.image_uri} alt="no image available" width="200" height="300" />
-                    <div><strong>{critter.name["name-EUen"]}</strong></div>
+                    <img className={styles.FirstColumn} src={critter.image_uri} alt="no image available" width="200" height="200" />
+                    <div className={styles.Name}><strong>{critter.name["name-EUen"]}</strong></div>
                     
                     <div className={styles.SecondColumn}>
-                    <ul>Availability
+                    <ul className={styles.Availability}>Availability
                         <li>Months: {critter.availability["month-northern"]}</li>
                         <li>Time: {critter.availability["time"]}</li>
                     </ul>
-                    <ul>Sell
+                    <ul className={styles.Availability}>Sell
                         <li>Price: {critter.price} Bells</li>
                         <li>Flick's Price: {critter["price-flick"]} Bells</li>
                     </ul>
                     
-                    <div>Rarity: {critter.availability["rarity"]}</div>
                     </div>
+                    <div> <i>   {critter.availability["rarity"]}</i></div>
                     <button className={styles.Close} onClick={() => triggerModal()}>X</button>
                 </Modal>
     </>

@@ -23,8 +23,8 @@ class HomePage extends Component
             <button className={styles.Signup}>
                 <Link to="/signup" className={styles.Link}>Get Started</Link>
             </button>
-       
-        </div>
+            </div>
+        
        </> 
     )};
 }

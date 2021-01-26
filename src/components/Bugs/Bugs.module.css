@@ -6,18 +6,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-left: 15%;
     margin-right: 15%;
     
- 
 }
 
 .Bug {
     border: 2px solid #92c57c;
     width: 45px;
     height: 45px;
-    background-color: white;
+    background-color: #d6d1a9;
     
 
 }
@@ -29,10 +28,17 @@
 
 .Title {
     font-family: 'Gorditas', cursive;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .FirstColumn {
     width: 40%;
     float: left;
+    background-color: #d6d1a9;
+    border: 2px solid #d6d1a9;
+    border-radius: 10px;
+    
 }
 
 .SecondColumn {
@@ -44,6 +50,17 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.Name {
+    font-family: 'Gorditas', cursive; 
+}
+
+.Availability {
+    background-color: #d6d1a9;
+    border: 2px solid #d6d1a9;
+    border-radius: 10px;
+
 }
 
 

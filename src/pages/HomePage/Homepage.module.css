@@ -22,5 +22,14 @@
 }
 
 .Signup {
-   background-color: #f8a4af; 
+   background-color: #92c57c; 
 }
+
+.Login:hover {
+    background-color: #82ad6f;
+}
+
+.Signup:hover {
+    background-color: #82ad6f;
+}
+
