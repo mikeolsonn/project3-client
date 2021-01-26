@@ -1,7 +1,8 @@
 import { setToken, getUserFromToken, removeToken } from './tokenService';
 
 // declare a variable for URL to our API
-const BASE_URL= 'http://localhost:3001/api/users';
+// const BASE_URL= 'http://localhost:3001/api/users'; development url
+const BASE_URL= 'https://crossingguide-api.herokuapp.com/api/users';
 
 // define functions for making ajax REQUESTS
 function signup(user) {
