@@ -31,6 +31,8 @@ Dashboard
 
 ## :rocket: Getting Started
 
+Click <a href="https://crossing-guide.netlify.app">here</a> to get started.
+
 Just signup or login to unlock the guide!
 
 ## :arrow_right: Next Steps
