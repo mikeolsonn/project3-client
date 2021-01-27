@@ -43,24 +43,28 @@ function SignupPage(props) {
                 onChange={handleChange}
                 name="firstName" 
                 type="text"
+                placeholder="first name"
                  />
                 <input 
                 value={formState.lastName} 
                 onChange={handleChange}
                 name="lastName" 
                 type="text"
+                placeholder="last name"
                  />
                 <input 
                 value={formState.email} 
                 onChange={handleChange}
                 name="email" 
                 type="email"
+                placeholder="email"
                  />
                 <input 
                 value={formState.password} 
                 onChange={handleChange}
                 name="password" 
                 type="password"
+                placeholder="password"
                  />
                  <button>Sign Up</button>
             </form>

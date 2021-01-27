@@ -20,14 +20,14 @@ function App(props) {
   async function getAppData() {
     const data = await getItems()
     const dataArray = Object.values(data)
-    // console.log(dataArray.flat())
+    
     setItemData({results: dataArray.flat()})
   }
-  // .slice(0, 100) -> add to end of .flat() if it breaks
+  
   async function getFishData() {
     const fish = await getFish()
     const fishArray = Object.values(fish)
-    console.log(fishArray.flat());
+    
     setFishData({results: fishArray.flat()})
   }
 

@@ -17,9 +17,9 @@ function Header(props) {
                     <li>
                         <Link to="" onClick={props.handleLogout}>Logout</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="/dashboard">Dashboard</Link>
-                    </li>
+                    </li> */}
 
                     </>
 
